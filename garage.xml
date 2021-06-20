@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<garage>
+    <vehicles>
+        <entry>
+            <key>345</key>
+            <value>
+                <licensePlate>345</licensePlate>
+                <price>1000</price>
+                <problemDescription>gaga</problemDescription>
+                <status>NEW</status>
+                <type>Motorcycle</type>
+                <year>2000</year>
+            </value>
+        </entry>
+        <entry>
+            <key>789</key>
+            <value>
+                <licensePlate>789</licensePlate>
+                <price>5000</price>
+                <problemDescription>sdSdsdd</problemDescription>
+                <status>NEW</status>
+                <type>Truck</type>
+                <year>1900</year>
+            </value>
+        </entry>
+    </vehicles>
+    <profit>5000</profit>
+</garage>

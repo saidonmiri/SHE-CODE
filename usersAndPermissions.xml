@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<usersAndPermissions>
+    <users>
+        <entry>
+            <key>miri.saidon.SHE-CODES</key>
+            <value>
+                <firstName>miri</firstName>
+                <lastName>saidon</lastName>
+                <type>Admin</type>
+                <password>123456</password>
+                <linkedInPage></linkedInPage>
+            </value>
+        </entry>
+    </users>
+</usersAndPermissions>
