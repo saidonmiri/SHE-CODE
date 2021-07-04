@@ -1,4 +1,4 @@
-package com.company.Demo.FinalProject;
+package com.company.Demo.finalProject;
 
 
 public class SheCodes {

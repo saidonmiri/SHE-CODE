@@ -1,20 +1,20 @@
-package com.company.Demo.FinalProject;
+package com.company.Demo.finalProject;
 
 
 
+
+import com.sun.deploy.util.StringUtils;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Mentor  extends User implements  Volunteers ,java.io.Serializable {
+public class Mentor  extends User implements java.io.Serializable {
 
-    private Set courses ;
+    private String courses ;
     private boolean canMentor;
 
 
@@ -27,25 +27,25 @@ public class Mentor  extends User implements  Volunteers ,java.io.Serializable {
 //    }
 
 
-    public Set getCourses() {
+    public String getCourses() {
         return courses;
     }
 
 
-    public boolean isCanMentor() {
+    private boolean isCanMentor() {
         return canMentor;
     }
 
-    public void setCourses(Set courses) {
+    private void setCourses(String courses) {
         this.courses = courses;
     }
 
-    public void setCanMentor(boolean canMentor) {
+    private void setCanMentor(boolean canMentor) {
         this.canMentor = canMentor;
     }
 
     @Override
-    public  void setAdditionalData() {
+    public  boolean setAdditionalData() {
         Scanner console = new Scanner(System.in);
         System.out.println("Did you mentor before(Y/N):");
         String canMentor = console.next();
@@ -55,18 +55,19 @@ public class Mentor  extends User implements  Volunteers ,java.io.Serializable {
                 break;
             case "N":
                 this.setCanMentor(false);
-                break;
+                return false;
             default:
                 System.out.println("Invalid option. Aborting...");
-                break;
+                return false;
         }
 
         //Set better than list - automatic validation that unique courses will be set
-        Set<CourseName> courseNameSet = new HashSet<>();
+        //Set<CourseName> courseNameSet = new HashSet<>();
+        List<String> courseNameSet = new ArrayList<>();
         boolean courseFlag = false;
 
+
         while (!courseFlag) {
-            System.out.println("");
             System.out.println("Which course you graduated : ");
             System.out.println("1. Java");
             System.out.println("2. Python");
@@ -76,19 +77,23 @@ public class Mentor  extends User implements  Volunteers ,java.io.Serializable {
             Integer courseNumber = console.nextInt();
             switch (courseNumber) {
                 case 1:
-                    courseNameSet.add(CourseName.JAVA);
+                    //TODO translate to string from Set
+                    courseNameSet.add(CourseName.JAVA.toString());
                     break;
                 case 2:
-                    courseNameSet.add(CourseName.PYTHON);
+                    courseNameSet.add(CourseName.PYTHON.toString());
                     break;
                 case 3:
-                    courseNameSet.add(CourseName.WEB);
+                    courseNameSet.add(CourseName.WEB.toString());
                     break;
                 case 4:
-                    courseNameSet.add(CourseName.DBA);
+                    courseNameSet.add(CourseName.DBA.toString());
                     break;
                 case 5:
-                    this.setCourses(courseNameSet);
+                    //String listOfCourses = String.join(",", courseNameSet);
+                    //
+                    String courseNameString = StringUtils.join(courseNameSet, ",");
+                    this.setCourses(courseNameString);
                     courseFlag= true;
                     //because graduate as least one course , can mentor although was not mentor before
                     if ( !courseNameSet.isEmpty()) {
@@ -99,10 +104,11 @@ public class Mentor  extends User implements  Volunteers ,java.io.Serializable {
                     break;
                 default:
                     System.out.println("Invalid Course. Aborting...");
-                    break;
+                    return false;
             }
 
         }
+        return true;
     }
 
     @Override

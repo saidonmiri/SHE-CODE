@@ -1,5 +1,7 @@
 package com.company.Demo.Garage;
 
+import com.company.Demo.finalProject.Allies;
+
 import javax.xml.bind.annotation.*;
 import java.util.*;
 
@@ -11,7 +13,8 @@ public class GarageManager {
     @XmlElements({
             @XmlElement(type=Car.class),
             @XmlElement(type=Truck.class),
-            @XmlElement(type=Motorcycle.class)
+            @XmlElement(type=Motorcycle.class),
+            @XmlElement(type= Allies.class)
     })
     static HashMap<String, Vehicle> vehicles;
     private Integer profit;

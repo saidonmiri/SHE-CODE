@@ -1,4 +1,4 @@
-package com.company.Demo.FinalProject;
+package com.company.Demo.finalProject;
 
 
 public class UserFactory {
@@ -10,8 +10,8 @@ public class UserFactory {
                 return new Student();
             case 2:
                 return new Mentor();
-//            case 3:
-//                return new Allies();
+            case 3:
+                return new Allies();
             default:
                 return null;
         }

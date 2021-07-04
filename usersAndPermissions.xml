@@ -2,13 +2,75 @@
 <usersAndPermissions>
     <users>
         <entry>
-            <key>miri.saidon.SHE-CODES</key>
-            <value>
+            <key>גהש.גדהשג.she-codes</key>
+            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="student">
+                <firstName>גהש</firstName>
+                <lastName>גדהשג</lastName>
+                <type>Student</type>
+                <alumniId>גהש.גדהשג.she-codes</alumniId>
+                <password>גשגה</password>
+                <linkedInPage>זגשגשג</linkedInPage>
+                <jobStatus>NOT_LOOKING</jobStatus>
+            </value>
+        </entry>
+        <entry>
+            <key>dfbab.zdfba.she-codes</key>
+            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="student">
+                <firstName>dfbab</firstName>
+                <lastName>zdfba</lastName>
+                <type>Student</type>
+                <alumniId>dfbab.zdfba.she-codes</alumniId>
+                <password>123456</password>
+                <linkedInPage>vsfdva</linkedInPage>
+                <jobStatus>NOT_LOOKING</jobStatus>
+            </value>
+        </entry>
+        <entry>
+            <key>123.234.she-codes</key>
+            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mentor">
+                <firstName>123</firstName>
+                <lastName>234</lastName>
+                <type>Mentor</type>
+                <alumniId>123.234.she-codes</alumniId>
+                <password>1234</password>
+                <linkedInPage>fa</linkedInPage>
+                <courses>JAVA,PYTHON,WEB</courses>
+                <canMentor>true</canMentor>
+            </value>
+        </entry>
+        <entry>
+            <key>zdgag.dfad.she-codes</key>
+            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mentor">
+                <firstName>zdgag</firstName>
+                <lastName>dfad</lastName>
+                <type>Mentor</type>
+                <alumniId>zdgag.dfad.she-codes</alumniId>
+                <password>123456</password>
+                <linkedInPage>zvzv</linkedInPage>
+                <courses>JAVA,PYTHON</courses>
+                <canMentor>true</canMentor>
+            </value>
+        </entry>
+        <entry>
+            <key>zdf.zfg.she-codes</key>
+            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="allies">
+                <firstName>zdf</firstName>
+                <lastName>zfg</lastName>
+                <type>Allies</type>
+                <alumniId>zdf.zfg.she-codes</alumniId>
+                <password>zdgaga</password>
+                <linkedInPage>zgagda</linkedInPage>
+                <canMentor>true</canMentor>
+            </value>
+        </entry>
+        <entry>
+            <key>miri.saidon.she-codes</key>
+            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="admin">
                 <firstName>miri</firstName>
                 <lastName>saidon</lastName>
                 <type>Admin</type>
+                <alumniId>miri.saidon.she-codes</alumniId>
                 <password>123456</password>
-                <linkedInPage></linkedInPage>
             </value>
         </entry>
     </users>

@@ -1,4 +1,4 @@
-package com.company.Demo.FinalProject;
+package com.company.Demo.finalProject;
 
 
 import javax.xml.bind.annotation.XmlSeeAlso;
@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlTransient;
 import java.util.Scanner;
 
 @XmlTransient
-@XmlSeeAlso({Mentor.class,Student.class})
+@XmlSeeAlso({Mentor.class,Student.class,Admin.class,Allies.class})
 public class User implements java.io.Serializable {
 
 
@@ -90,7 +90,7 @@ public class User implements java.io.Serializable {
 
     }
 
-    public  void setAdditionalData(){}
+    public  boolean setAdditionalData(){return true;}
 
     public boolean setUserDetails()
     {

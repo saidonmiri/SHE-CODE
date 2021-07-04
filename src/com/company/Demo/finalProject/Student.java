@@ -1,4 +1,4 @@
-package com.company.Demo.FinalProject;
+package com.company.Demo.finalProject;
 
 
 
@@ -49,7 +49,7 @@ public class Student extends  User implements java.io.Serializable {
     }
 
     @Override
-    public  void setAdditionalData(){
+    public  boolean setAdditionalData(){
 
         Scanner console = new Scanner(System.in);
         System.out.println("Select the job status:");
@@ -100,18 +100,18 @@ public class Student extends  User implements java.io.Serializable {
                     courseNameSet.add(CourseName.DBA);
                     break;
                 case 5:
-                    this.setCourses(courseNameSet);
+                    //this.setCourses(courseNameSet);
                     courseFlag= true;
                     System.out.println("Exit Course Selection...");
                     break;
                 default:
                     System.out.println("Invalid Course. Aborting...");
-                    break;
+                    return false;
             }
 
         }
 
-
+    return true;
     }
 
 }
