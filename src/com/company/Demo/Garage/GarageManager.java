@@ -1,6 +1,6 @@
 package com.company.Demo.Garage;
 
-import com.company.Demo.finalProject.Allies;
+import com.company.Demo.finalProject.main.Allies;
 
 import javax.xml.bind.annotation.*;
 import java.util.*;

@@ -1,4 +1,4 @@
-package com.company.Demo.finalProject;
+package com.company.Demo.finalProject.main;
 
 
 import javax.xml.bind.annotation.XmlAccessType;

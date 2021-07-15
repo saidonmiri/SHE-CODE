@@ -1,4 +1,4 @@
-package com.company.Demo.finalProject;
+package com.company.Demo.finalProject.main;
 
 
 
@@ -85,7 +85,7 @@ public class SheCodesManager  implements java.io.Serializable {
         }
 
         //Validate if user is admin
-        if(!validateAdminPermission(alumniId,password)) {
+        if(!validatePermission(alumniId,password,true)) {
             return false;
         }
 
@@ -127,17 +127,27 @@ public class SheCodesManager  implements java.io.Serializable {
 
         return true;
     }
-        //TODO - can we do reuse instead of duplicate code??
-    private boolean validateAdminPermission(String alumniId ,  String password ) {
+//update to public because of Unit Test
+    private boolean validatePermission(String alumniId ,  String password , boolean adminFlag ) {
 
         for (User AdminUser : users.values()) {
-            if (AdminUser.getAlumniId().equals(alumniId) && AdminUser.getPassword().equals(password) && AdminUser.getType().equals("Admin") ) {
-                return true;
+            if (adminFlag){
+                if (AdminUser.getAlumniId().equals(alumniId) && AdminUser.getPassword().equals(password) && AdminUser.getType().equals("Admin")) {
+                    System.out.println("user and password are correct and type is Admin ");
+                    return true;
+                }
+            }
+            else {
+                if (AdminUser.getAlumniId().equals(alumniId) && AdminUser.getPassword().equals(password)) {
+                    System.out.println("user and password are correct ");
+                    return true;
+                }
             }
         }
-        System.out.println("user is not Admin");
+        System.out.println("user or password wrong ");
         return false;
     }
+
 
 
     private User getUserByAlumniId(String alumniId) {
@@ -150,17 +160,7 @@ public class SheCodesManager  implements java.io.Serializable {
 
     }
 
-    private boolean validatePermission(String alumniId ,  String password ) {
 
-        for (User User : users.values()) {
-            if (User.getAlumniId().equals(alumniId) && User.getPassword().equals(password)  ) {
-
-                return true;
-            }
-        }
-        System.out.println("user or password is incorrect ");
-        return false;
-    }
 
     private boolean sheCodesUpdateProfile()
     {
@@ -196,7 +196,7 @@ public class SheCodesManager  implements java.io.Serializable {
             return "";
         }
 
-        if(!validatePermission(alumniId ,password)) {
+        if(!validatePermission(alumniId ,password,false)) {
             return "";
         }
         return alumniId;
@@ -215,7 +215,7 @@ public class SheCodesManager  implements java.io.Serializable {
             System.out.println("Which category you want to update");
             System.out.println("    1. Update Password ");
             System.out.println("    2. LinkedIn Page ");
-            System.out.println("    4. EXIT  ");
+            System.out.println("    3ר. EXIT  ");
             System.out.println();
 
             selectedOption = console.nextInt();

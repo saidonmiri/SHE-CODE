@@ -58,8 +58,8 @@
                 <lastName>zfg</lastName>
                 <type>Allies</type>
                 <alumniId>zdf.zfg.she-codes</alumniId>
-                <password>zdgaga</password>
-                <linkedInPage>zgagda</linkedInPage>
+                <password>gasdvasvagvaa</password>
+                <linkedInPage>zzvzdvz</linkedInPage>
                 <canMentor>true</canMentor>
             </value>
         </entry>
@@ -71,6 +71,18 @@
                 <type>Admin</type>
                 <alumniId>miri.saidon.she-codes</alumniId>
                 <password>123456</password>
+            </value>
+        </entry>
+        <entry>
+            <key>Yoss.Saidon.she-codes</key>
+            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="student">
+                <firstName>Yoss</firstName>
+                <lastName>Saidon</lastName>
+                <type>Student</type>
+                <alumniId>Yoss.Saidon.she-codes</alumniId>
+                <password>12345</password>
+                <linkedInPage>f</linkedInPage>
+                <jobStatus>LOOKING</jobStatus>
             </value>
         </entry>
     </users>
